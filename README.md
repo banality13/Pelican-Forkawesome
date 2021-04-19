@@ -1,35 +1,30 @@
-forkawesome-integration: A Plugin for Pelican
-====================================================
+# Forkawesome intergration: A Plugin for Pelican
 
-[![Build Status](https://img.shields.io/github/workflow/status/pelican-plugins/forkawesome-integration/build)](https://github.com/pelican-plugins/forkawesome-integration/actions)
-[![PyPI Version](https://img.shields.io/pypi/v/pelican-forkawesome-integration)](https://pypi.org/project/pelican-forkawesome-integration/)
-![License](https://img.shields.io/pypi/l/pelican-forkawesome-integration?color=blue)
+Makes it easy to integrate forkawesome icons in Pelican content.
 
-Makes it easy to integrate forkawesome icons in markdown
+**This is still a work in progress**
 
-Installation
-------------
+## Usage
 
-This plugin can be installed via:
+If you use a lot of icons to make your Pelican website content prettier, a lot of times you'll end up writing HTML in Markdown, which can't be said to be very elegant.
 
-    python -m pip install pelican-forkawesome-integration
+This plugin parses your content and replaces :
+```markdown
+## $gimp$ My super title about Gimp
 
-Usage
------
+The rest of my paragraph about gimp goes here.
+```
 
-<<Add plugin details here>>
+with :
 
-Contributing
-------------
+```markdown
+## <i class='fa fa-gimp'> My super title about Gimp
 
-Contributions are welcome and much appreciated. Every little bit helps. You can contribute by improving the documentation, adding missing features, and fixing bugs. You can also help out by reviewing and commenting on [existing issues][].
+The rest of my paragraph about gimp goes here.
+```
 
-To start contributing to this plugin, review the [Contributing to Pelican][] documentation, beginning with the **Contributing Code** section.
+allowing you to put your [Forkawesome](https://forkaweso.me/) icons easily into text.
 
-[existing issues]: https://github.com/pelican-plugins/forkawesome-integration/issues
-[Contributing to Pelican]: https://docs.getpelican.com/en/latest/contribute.html
-
-License
--------
-
-This project is licensed under the AGPL-3.0 license.
+**Notes**
+* Adding the forkawesome library to your theme is up to you : the CSS library has to be available to your browser some way, whether you use a CDN or download the lib yourself.
+* This happens _after_ HTML generation, meaning other operations of find-and-replace on markdown take place before.
