@@ -10,7 +10,7 @@ If you use a lot of icons to make your Pelican website content prettier, a lot o
 
 This plugin parses your content and replaces :
 ```markdown
-## $gimp$ My super title about Gimp
+## $$gimp$$ My super title about Gimp
 
 The rest of my paragraph about gimp goes here.
 ```

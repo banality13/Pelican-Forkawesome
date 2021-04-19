@@ -84,7 +84,7 @@ def replace_stuff(pelican_data):
     if pelican_data._content is None:
         return;
     content = pelican_data._content
-    pelican_data._content = re.sub("\$(.*)\$", r'<i class="fa fa-\1"  aria-hidden="true"></i>', content)
+    pelican_data._content = re.sub("\$\$(.*)\$\$", r'<i class="fa fa-\1"  aria-hidden="true"></i>', content)
 
 def register():
     signals.content_object_init.connect(replace_stuff)
